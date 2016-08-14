@@ -1,0 +1,14 @@
+- if @gem_versions.empty?
+  .text-center There is no available gems. Please run special task to populate gem database.
+- else
+  table.table.table-sortable
+    thead
+      th = 'ID'
+      th = 'Name'
+      th = 'Version'
+      th = 'Gem copy path'
+      th = 'SHA'
+      th
+    tbody
+      - @gem_versions.each do |version|
+        = render 'gem_versions/gem_version', gem_version: version

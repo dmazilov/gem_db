@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - db/*
+    - db/migrate/*
+    - config/*
+    - config/*/*
+    - test/*
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 20
+#  Special for sidekiq worker perform method
+Metrics/AbcSize:
+  Max: 19
